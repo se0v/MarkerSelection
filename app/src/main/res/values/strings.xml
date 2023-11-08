@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Marker Selection</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Find_car">Find car:</string>
+    <string name="lets_play">Let\'s play!</string>
+</resources>

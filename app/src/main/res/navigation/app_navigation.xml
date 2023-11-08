@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/welcomeScreenFragment">
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.markerselection.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment2_to_markersFragment"
+            app:destination="@id/markersFragment"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/markersFragment"
+        android:name="com.example.markerselection.MarkersFragment"
+        android:label="fragment_markers"
+        tools:layout="@layout/fragment_markers" >
+        <action
+            android:id="@+id/action_markersFragment_to_winFragment"
+            app:destination="@id/winFragment"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"
+            app:popUpTo="@id/welcomeScreenFragment" />
+        <action
+            android:id="@+id/action_markersFragment_to_loseFragment"
+            app:destination="@id/loseFragment"
+            app:enterAnim="@anim/fade_in_anim"
+            app:exitAnim="@anim/fade_out_anim"
+            app:popEnterAnim="@anim/slide_in_left_anim"
+            app:popExitAnim="@anim/slide_in_right_anim"
+            app:popUpTo="@id/markersFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment"
+        android:name="com.example.markerselection.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_markersFragment"
+            app:destination="@id/markersFragment"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"
+            app:popUpTo="@id/welcomeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loseFragment"
+        android:name="com.example.markerselection.LoseFragment"
+        android:label="fragment_lose"
+        tools:layout="@layout/fragment_lose" >
+        <action
+            android:id="@+id/action_loseFragment_to_markersFragment"
+            app:destination="@id/markersFragment"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"
+            app:popUpTo="@id/welcomeScreenFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.markerselection.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/blackListFragment"
+        android:name="com.example.markerselection.BlackListFragment"
+        android:label="fragment_black_list"
+        tools:layout="@layout/fragment_black_list" />
+</navigation>

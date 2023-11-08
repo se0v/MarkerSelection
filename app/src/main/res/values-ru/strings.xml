@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Выборы жетона</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Фрагмент</string>
+    <string name="Find_car">Выиграй автомобиль</string>
+    <string name="lets_play">Играть</string>
+</resources>
